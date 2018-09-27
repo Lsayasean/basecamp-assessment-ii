@@ -30,6 +30,7 @@ var adjustCount = {
   }
 }
 
+
 // #5 Create an array called 'myFriends' with four of your friends names
 
 var myFriends = ['bob','sally','fred','nally'];
@@ -48,19 +49,17 @@ var myArrayCopy = myArray.slice();
 //DON'T TOUCH THE CODE BELOW
 var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
-function evensOnly(val, index) {
+function evensOnly(val) {
   var even = [];
-  for(i = 0; i <= myNumbers.length -1; i++){
-    if(val[i] % 2 == 0){
-      return val[i];
+  for(i = 0; i <= val.length -1; i++){
+    if(val[i] % 2 === 0){
+      even.push(val[i]);
     }
-    even.push(val[i]);
   }
-
+  return even;
 }
 
 // #9 Using filter(), return only your friends of the array of people below. Assign it to a variable called 'trueFriends'.
-var trueFriends = [];
 var peopleIknow = [
   { name: "Steve", friend: true },
   { name: "Dan", friend: false },
@@ -70,22 +69,20 @@ var peopleIknow = [
   { name: "Holly", friend: true }
 ];
 
-results = peopleIknow.filter(function(val, index){
-  if(val.friend === true){
-    trueFriends.push(val.name);
-  }
-})
+var trueFriends = peopleIknow.filter(function(val){
+  return val.friend === true;
+  })
 
-trueFriends[results];
+
 // #10 Create a function called indexFinder that will loop over an array and return a new array of the indexes of the contents e.g. [243, 123, 4, 12] would return [0,1,2,3]. 
 // Create a new variable called 'indexes' and set it to contain the indexes of randomNumbers.
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+let indexes = [];
 
 function indexFinder(arr){
-  for(i = 0; i <= arr.length -1; i++){
-    arr[i] = i;
+  for(i = 0; i < arr.length; i++){
+    indexes.push(i)
   }
+  return indexes;
 }
-indexFinder(randomNumbers);
-
-var indexes = [randomNumbers];
+console.log(indexFinder(randomNumbers));
