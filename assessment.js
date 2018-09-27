@@ -17,7 +17,7 @@ var message = {
   userName: me.firstname
 };
 //DON'T TOUCH THE CODE ABOVE
-mesage['text'] = 'Hi DevMountian';
+message['text'] = 'Hi DevMountian';
 
 // #4 Create an object called 'adjustCount' and create two methods. One called 'upVote' and one called 'downVote'. upVote should take in a number and add one to it and downVote should take in a number and minus one from it.
 
